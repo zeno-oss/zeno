@@ -1,0 +1,13 @@
+{
+  "name": "terner",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "install": "cd app && yarn && cd .. && cd server && yarn && npx prisma generate && cd .. && cd desktop && yarn && cd ..",
+    "dev-app": "cd app && yarn start",
+    "dev-ios": "cd app && yarn ios",
+    "dev-android": "cd app && yarn android",
+    "dev-server": "cd server && yarn dev",
+    "dev-desktop": "cd desktop && yarn start"
+  }
+}
