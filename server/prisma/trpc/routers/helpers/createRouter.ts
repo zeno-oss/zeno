@@ -1,6 +1,11 @@
 import * as trpc from "@trpc/server";
 import { permissions } from "../../../shield/shield";
 
+/* make sure you have this line as import for permissions
+dont npx prisma generate for no reason
+// import { permissions } from "../../../shield/shield";
+*/
+
 // make sure to change this according to your Context path
 import { Context } from '../../../../src/context';
 
