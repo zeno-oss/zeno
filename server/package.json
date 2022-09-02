@@ -1,6 +1,6 @@
 {
-  "name": "@examples/express-trpc-shield",
-  "version": "9.23.4",
+  "name": "terner-server",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "ts-node-dev ./src/server"

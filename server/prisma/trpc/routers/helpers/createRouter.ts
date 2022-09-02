@@ -1,5 +1,5 @@
 import * as trpc from "@trpc/server";
-import { permissions } from "/Users/shiroyasha/terner/server/prisma/shield/shield";
+import { permissions } from "../../../shield/shield";
 
 // make sure to change this according to your Context path
 import { Context } from '../../../../src/context';
