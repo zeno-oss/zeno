@@ -8,6 +8,12 @@
     "dev-ios": "cd app && yarn ios",
     "dev-android": "cd app && yarn android",
     "dev-server": "cd server && yarn dev",
-    "dev-desktop": "cd desktop && yarn start"
+    "dev-desktop": "cd desktop && yarn start",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1",
+    "pretty-quick": "^3.1.3"
   }
 }
