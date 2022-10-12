@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev-old": "ts-node ./src/server",
-    "dev": "nodemon --config nodemon.json src/server.ts"
+    "dev": "nodemon --config nodemon.json src/server.ts",
+    "postinstall": "npx prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",

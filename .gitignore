@@ -3,3 +3,4 @@ node_modules
 .todo
 backup
 prisma/trpc
+turbo-*.log
