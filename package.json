@@ -1,20 +1,31 @@
 {
   "name": "terner",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": false,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
   "scripts": {
-    "install-old": "cd app && yarn && cd .. && cd server && yarn && npx prisma generate && cd .. && cd desktop && yarn && cd ..",
-    "install": "cd app && yarn && cd .. && cd server && yarn && cd .. && cd desktop && yarn && cd ..",
-    "dev-app": "cd app && yarn start",
-    "dev-ios": "cd app && yarn ios",
-    "dev-android": "cd app && yarn android",
-    "dev-server": "cd server && yarn dev",
-    "dev-desktop": "cd desktop && yarn start",
+    "postinstall": "turbo postinstall",
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "clean": "rm -rf node_modules",
+    "lint": "turbo lint && manypkg check",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "husky": "^8.0.0",
+    "@manypkg/cli": "^0.19.2",
+    "husky": "^8.0.1",
     "prettier": "^2.7.1",
-    "pretty-quick": "^3.1.3"
-  }
+    "turbo": "^1.5.6"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "packageManager": "yarn@1.22.19"
 }
