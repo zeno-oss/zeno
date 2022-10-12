@@ -3,11 +3,10 @@ import express from "express";
 
 import * as trpcExpress from "@trpc/server/adapters/express";
 
-import config from "./config/index";
+import config from "./config";
 import { createContext } from "./context";
-import { Headers } from "./middleware/Headers";
-import Logger from "./middleware/Logger";
-import { appRouter } from "./trpc/routers";
+import { Headers, Logger } from "./middleware";
+import { appRouter } from "./routers";
 
 const app = express();
 

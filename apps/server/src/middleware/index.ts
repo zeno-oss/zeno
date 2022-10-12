@@ -1,5 +1,7 @@
 import cors, { CorsOptions } from "cors";
-import config from "../../config/index";
+import morgan from "morgan";
+
+import config from "../config";
 
 const API_URL: string = `http://${config.HOST}:${config.PORT}` ?? "";
 
@@ -18,4 +20,14 @@ const options: CorsOptions = {
   preflightContinue: true,
 };
 
+const logType = (): string => {
+  switch (config.ENV) {
+    case "development":
+      return "dev";
+    default:
+      return "combined";
+  }
+};
+
 export const Headers = cors(options);
+export const Logger = morgan(logType());
