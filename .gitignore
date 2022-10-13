@@ -2,6 +2,42 @@ node_modules
 .env
 .todo
 backup
+
+# Express
 prisma/trpc
+
+# Turbo
 turbo-*.log
+
+# Expo
 .expo
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage directory used by tools like istanbul
+coverage
+.eslintcache
+
+# OSX
+.DS_Store
+
+# Electron
+.erb/dll
+
+.idea
+npm-debug.log.*
+*.css.d.ts
+*.sass.d.ts
+*.scss.d.ts
+
+release
+
+# VSCode
+.vscode
