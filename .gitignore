@@ -4,3 +4,4 @@ node_modules
 backup
 prisma/trpc
 turbo-*.log
+.expo
