@@ -9,9 +9,9 @@
   },
   "dependencies": {
     "@prisma/client": "^4.4.0",
-    "@trpc/server": "^10.0.0-proxy-beta.15",
+    "@trpc/server": "^10.0.0-proxy-beta.20",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "zod": "^3.19.1"
   },
   "devDependencies": {

@@ -10,10 +10,10 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@tanstack/react-query": "^4.10.3",
-    "@trpc/client": "^10.0.0-proxy-beta.15",
-    "@trpc/react": "^10.0.0-proxy-beta.15",
-    "@trpc/server": "^10.0.0-proxy-beta.15",
+    "@tanstack/react-query": "^4.12.0",
+    "@trpc/client": "^10.0.0-proxy-beta.20",
+    "@trpc/react": "^10.0.0-proxy-beta.20",
+    "@trpc/server": "^10.0.0-proxy-beta.20",
     "expo": "~46.0.13",
     "expo-constants": "^13.2.4",
     "expo-status-bar": "~1.4.0",

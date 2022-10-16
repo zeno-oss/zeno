@@ -2548,12 +2548,25 @@
   resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.10.3.tgz#a6477bab9ed1ae4561ca0a59ae06f8c615c692b7"
   integrity sha512-+ME02sUmBfx3Pjd+0XtEthK8/4rVMD2jcxvnW9DSgFONpKtpjzfRzjY4ykzpDw1QEo2eoPvl7NS8J5mNI199aA==
 
+"@tanstack/query-core@4.12.0":
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.12.0.tgz#0e96adcfe182efc4ea4c21802f7596d56c6cd60a"
+  integrity sha512-KEiFPNLMFByhNL2s6RBFL6Z5cNdwwQzFpW/II3GY+rEuQ343ZEoVyQ48zlUXXkEkbamQFIFg2onM8Pxf0Yo01A==
+
 "@tanstack/react-query@^4.10.3":
   version "4.10.3"
   resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.10.3.tgz#294deefa0fb6ada88bc4631d346ef5d5551c5443"
   integrity sha512-4OEJjkcsCTmG3ui7RjsVzsXerWQvInTe95CBKFyOV/GchMUlNztoFnnYmlMhX7hLUqJMhbG9l7M507V7+xU8Hw==
   dependencies:
     "@tanstack/query-core" "4.10.3"
+    use-sync-external-store "^1.2.0"
+
+"@tanstack/react-query@^4.12.0":
+  version "4.12.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.12.0.tgz#2cb233ef1ccf7537aeed61ca171fc3dcc52d9c57"
+  integrity sha512-prchV1q+CJ0ZVo8Rts2cOF3azDfQizZZySmH6XXsXRcPTbir0sgb9fp0vY/5l5ZkSYjTvWt/OL8WQhAhYMSvrA==
+  dependencies:
+    "@tanstack/query-core" "4.12.0"
     use-sync-external-store "^1.2.0"
 
 "@tootallnate/once@2":
@@ -2566,15 +2579,30 @@
   resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.0.0-proxy-beta.18.tgz#1ea37b6a597a71e489e14a573f12094e7672f092"
   integrity sha512-jRL2muN9sGrK/EPifZmii0206KcjxW7LGsLVfpIv9ol5PvZQSBxUqmFTlS41LyU4BzfueYHByNDEsU17YCxqzw==
 
+"@trpc/client@^10.0.0-proxy-beta.20":
+  version "10.0.0-proxy-beta.20"
+  resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.0.0-proxy-beta.20.tgz#cbadac772386a7849333d63d6137dd2f5520df74"
+  integrity sha512-3tATODSkVvwuB1013rpoE7kHMR0CeUm1DAr4zHCRh30NC5W6zqWzqtDEaxKlDbTiU5KrLQV7RH7au3CZtCWbPQ==
+
 "@trpc/react@^10.0.0-proxy-beta.15":
   version "10.0.0-proxy-beta.18"
   resolved "https://registry.yarnpkg.com/@trpc/react/-/react-10.0.0-proxy-beta.18.tgz#3940a8211967c602640d56cd41d2ebbe9f1bfe48"
   integrity sha512-APCgzgV1+9G/gl74GudrujFgWFE+/N1INbt6rqN8BN7I6RBMpk0ZDerMxSLDmhiZalLlQX+YUF73fj6vZm1G+w==
 
+"@trpc/react@^10.0.0-proxy-beta.20":
+  version "10.0.0-proxy-beta.20"
+  resolved "https://registry.yarnpkg.com/@trpc/react/-/react-10.0.0-proxy-beta.20.tgz#985422b5a5b5ad2c280fa23ccb1714379f29538c"
+  integrity sha512-axuy3Nf71j6vVQFhc7ATSOW4gMTL92RSMTA0p93dNoNQpKqADGjjB1bFUqAmCeAjy441s+h9tqhj3g14sQ/NmA==
+
 "@trpc/server@^10.0.0-proxy-beta.15":
   version "10.0.0-proxy-beta.18"
   resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.0.0-proxy-beta.18.tgz#8761303e8a73a33d621fdeea5091ada749f7eb22"
   integrity sha512-XX6ENhyqacEERi9Zj93fcRJNeWIgsAGRCUrIrD+RCR1XNZfHIpetOa0zI1X1KQN1WL5HaprRr8SfECxDtxe+CQ==
+
+"@trpc/server@^10.0.0-proxy-beta.20":
+  version "10.0.0-proxy-beta.20"
+  resolved "https://registry.yarnpkg.com/@trpc/server/-/server-10.0.0-proxy-beta.20.tgz#87283abb93197eae5a11f16f3d38fbd28853df75"
+  integrity sha512-SmYwoNZPp7mtdfn1wgqQEekMWrXnVggRGPzsRSKZCXZ3LiYAD5KQKeerbjXSYNzB9eD0KYZPZr4b941zrdoALQ==
 
 "@trysound/sax@0.2.0":
   version "0.2.0"
@@ -5995,7 +6023,7 @@ express-ws@^5.0.2:
   dependencies:
     ws "^7.4.6"
 
-express@^4.17.1, express@^4.17.3, express@^4.18.1:
+express@^4.17.1, express@^4.17.3, express@^4.18.2:
   version "4.18.2"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.2.tgz#3fabe08296e930c796c19e3c516979386ba9fd59"
   integrity sha512-5/PsL6iGPdfQ/lKM1UuielYgv3BUoJfz1aUwU9vHZ+J7gyvwdQXFEBIEIaxeGf0GIcreATNyBExtalisDbuMqQ==
