@@ -104,3 +104,8 @@ typings/
 
 # Electron-Forge
 out/
+
+# Nextron
+.next
+app
+dist
