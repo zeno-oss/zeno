@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
-import { trpc } from "../utils/trpc";
+import { StyleSheet, Text, View } from 'react-native';
+
+import { trpc } from '../utils/trpc';
 
 const Home = () => {
-  const hello = trpc.example.useQuery();
+  const hello = trpc.hello.useQuery({ text: "client" });
 
   if (!hello.data) return <Text>Loading...</Text>;
 
   return (
     <View style={styles.container}>
-      <Text>{hello.data.message}</Text>
+      <Text>Greetings from TERNER 💞</Text>
+      <Text>This comes from the server:</Text>
+      <Text>{hello.data.greeting}</Text>
     </View>
   );
 };
