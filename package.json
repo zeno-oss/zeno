@@ -6,6 +6,10 @@
     "packages": [
       "apps/*",
       "packages/*"
+    ],
+    "nohoist": [
+      "electron",
+      "next"
     ]
   },
   "scripts": {
@@ -27,5 +31,8 @@
     "node": ">=14.0.0"
   },
   "dependencies": {},
-  "packageManager": "yarn@1.22.19"
+  "packageManager": "yarn@1.22.19",
+  "resolutions": {
+    "react": "18.2.0"
+  }
 }
