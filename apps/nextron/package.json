@@ -9,8 +9,14 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@tanstack/react-query": "^4.14.1",
+    "@trpc/client": "^10.0.0-proxy-beta.20",
+    "@trpc/next": "^10.0.0-proxy-beta.20",
+    "@trpc/react-query": "^10.0.0-proxy-beta.20",
+    "@trpc/server": "^10.0.0-proxy-beta.20",
     "electron-serve": "^1.1.0",
-    "electron-store": "^8.1.0"
+    "electron-store": "^8.1.0",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@types/node": "^16.11.7",

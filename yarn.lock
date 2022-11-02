@@ -2159,17 +2159,17 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@tanstack/query-core@4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.12.0.tgz#0e96adcfe182efc4ea4c21802f7596d56c6cd60a"
-  integrity sha512-KEiFPNLMFByhNL2s6RBFL6Z5cNdwwQzFpW/II3GY+rEuQ343ZEoVyQ48zlUXXkEkbamQFIFg2onM8Pxf0Yo01A==
+"@tanstack/query-core@4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-4.14.1.tgz#a74c4da03e79a8be07fa5ab2ebc12865146915e2"
+  integrity sha512-mUejKoFDe4NZB8jQJR1uuAl6IwvkUpOD2m8NcuTVPOu0pcxeeFPdrnHaljwOEFPtlqXoiiIIQGYy6whjCMN+iQ==
 
-"@tanstack/react-query@^4.12.0":
-  version "4.12.0"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.12.0.tgz#2cb233ef1ccf7537aeed61ca171fc3dcc52d9c57"
-  integrity sha512-prchV1q+CJ0ZVo8Rts2cOF3azDfQizZZySmH6XXsXRcPTbir0sgb9fp0vY/5l5ZkSYjTvWt/OL8WQhAhYMSvrA==
+"@tanstack/react-query@^4.14.1":
+  version "4.14.1"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-4.14.1.tgz#336545119b191e2096c394a3f2df2744cdc5e041"
+  integrity sha512-cRgNzigw4GSPwGlTEkXi8hi/xgUnSEt9jCkiC8oAT3PEIdsQ50onZcpXd+JNJcZk2RTh8KM1fGyWz6xYLiY8bg==
   dependencies:
-    "@tanstack/query-core" "4.12.0"
+    "@tanstack/query-core" "4.14.1"
     use-sync-external-store "^1.2.0"
 
 "@tootallnate/once@2":
@@ -2181,6 +2181,18 @@
   version "10.0.0-proxy-beta.20"
   resolved "https://registry.yarnpkg.com/@trpc/client/-/client-10.0.0-proxy-beta.20.tgz#cbadac772386a7849333d63d6137dd2f5520df74"
   integrity sha512-3tATODSkVvwuB1013rpoE7kHMR0CeUm1DAr4zHCRh30NC5W6zqWzqtDEaxKlDbTiU5KrLQV7RH7au3CZtCWbPQ==
+
+"@trpc/next@^10.0.0-proxy-beta.20":
+  version "10.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@trpc/next/-/next-10.0.0-rc.3.tgz#2585aa271c2916afb2f7291583c9299c324f799d"
+  integrity sha512-L9sHV93dPA4lZ/I8opfn3BJONnlnnJzJERggv7srt8H3aEhKVlNWIqxciNLHGXSq9q0C9i3Q6ND4F5kpRSQ5YA==
+  dependencies:
+    react-ssr-prepass "^1.5.0"
+
+"@trpc/react-query@^10.0.0-proxy-beta.20":
+  version "10.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@trpc/react-query/-/react-query-10.0.0-rc.3.tgz#34a0449c62544522d1fa0f07844d1f11cf38eb55"
+  integrity sha512-nEBqkTdKsd+vIE4RuDRX/b8U5ayxENp0G2vnh/fn4hiIszrLiPTGvnhGCZm/fT2GGW5nk7EEBcqf2o0z3r8Ftg==
 
 "@trpc/react@^10.0.0-proxy-beta.20":
   version "10.0.0-proxy-beta.20"
@@ -7902,6 +7914,11 @@ react-shallow-renderer@16.15.0:
   dependencies:
     object-assign "^4.1.1"
     react-is "^16.12.0 || ^17.0.0 || ^18.0.0"
+
+react-ssr-prepass@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/react-ssr-prepass/-/react-ssr-prepass-1.5.0.tgz#bc4ca7fcb52365e6aea11cc254a3d1bdcbd030c5"
+  integrity sha512-yFNHrlVEReVYKsLI5lF05tZoHveA5pGzjFbFJY/3pOqqjGOmMmqx83N4hIjN2n6E1AOa+eQEUxs3CgRnPmT0RQ==
 
 react@18.2.0, react@^18.2.0:
   version "18.2.0"
