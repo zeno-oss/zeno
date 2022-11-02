@@ -9,7 +9,8 @@
     ],
     "nohoist": [
       "electron",
-      "next"
+      "next",
+      "expo"
     ]
   },
   "scripts": {
@@ -33,6 +34,6 @@
   "dependencies": {},
   "packageManager": "yarn@1.22.19",
   "resolutions": {
-    "react": "18.2.0"
+    "react": "18.0.0"
   }
 }
