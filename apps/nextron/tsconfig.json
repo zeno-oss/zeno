@@ -1,4 +1,4 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "../renderer/next.config.js", "app", "dist"]
+  "exclude": ["node_modules", "../web/next.config.js", "app", "dist"]
 }
