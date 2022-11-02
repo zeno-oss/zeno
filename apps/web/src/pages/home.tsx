@@ -15,8 +15,7 @@ function Home() {
       <Head>
         <title>TERNER</title>
       </Head>
-      <div className="grid grid-col-1 text-3xl w-full text-center">
-        <img className="ml-auto mr-auto" src="/images/logo.png" />
+      <div className="flex h-[100vh] items-center justify-center flex-col text-2xl">
         <span>Greetings from TERNER 💕 </span>
         <span className="text-lg mt-4">This comes from the server:</span>
         <span className="text-lg font-bold">{hello.data.greeting}</span>

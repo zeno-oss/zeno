@@ -9,9 +9,9 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Text>Greetings from TERNER 💞</Text>
+      <Text style={styles.title}>Greetings from TERNER 💞</Text>
       <Text>This comes from the server:</Text>
-      <Text>{hello.data.greeting}</Text>
+      <Text style={styles.bold}>{hello.data.greeting}</Text>
     </View>
   );
 };
@@ -23,5 +23,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  title: {
+    fontSize: 24,
+  },
+  bold: {
+    fontWeight: "bold",
   },
 });
