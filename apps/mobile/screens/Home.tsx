@@ -1,14 +1,17 @@
-import { StyleSheet, Text, View } from "react-native";
-import { trpc } from "../utils/trpc";
+import { StyleSheet, Text, View } from 'react-native';
+
+import { trpc } from '../utils/trpc';
 
 const Home = () => {
-  const hello = trpc.example.useQuery();
+  const hello = trpc.hello.useQuery({ text: "client" });
 
   if (!hello.data) return <Text>Loading...</Text>;
 
   return (
     <View style={styles.container}>
-      <Text>{hello.data.message}</Text>
+      <Text style={styles.title}>Greetings from TERNER 💞</Text>
+      <Text>This comes from the server:</Text>
+      <Text style={styles.bold}>{hello.data.greeting}</Text>
     </View>
   );
 };
@@ -20,5 +23,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  title: {
+    fontSize: 24,
+  },
+  bold: {
+    fontWeight: "bold",
   },
 });
