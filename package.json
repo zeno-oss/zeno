@@ -12,10 +12,10 @@
     "postinstall": "turbo postinstall",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
-    "clean": "rm -rf node_modules",
     "lint": "turbo lint && manypkg check",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "clean": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "devDependencies": {
     "@manypkg/cli": "^0.19.2",
