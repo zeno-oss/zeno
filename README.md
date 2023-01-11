@@ -1,8 +1,8 @@
 # Zeno Stack
 
-A Monorepo featuring Next.js + Electron + Expo (React Native) + tRPC 
- 
-[![Stars](https://img.shields.io/github/stars/shiroyasha9/terner?style=social)](https://github.com/shiroyasha9/terner)
+A Monorepo featuring Next.js + Electron + Expo (React Native) + tRPC
+
+[![Stars](https://img.shields.io/github/stars/zeno-oss/zeno?style=social)](https://github.com/zeno-oss/zeno)
 
 ## Screenshots
 
@@ -13,23 +13,29 @@ A Monorepo featuring Next.js + Electron + Expo (React Native) + tRPC
 Requires Yarn (if you don't have yarn, install it by `npm install -g yarn`)
 
 Install Dependencies
+
 ```
 yarn
 ```
+
 To Run The Electron App & Next.js server (at http://localhost:8888):
+
 ```
-yarn workspace nextron dev
+yarn workspace desktop dev
 ```
+
 To Run The Mobile Expo App:
+
 ```
 yarn workspace mobile dev
 ```
+
 If you want to directly run on iOS or Android, replace the dev by android or ios respectively.
 
 ## Why This Repo
 
-I was trying to find some kind of way which allowed me to use the tRPC goodness in React Native as well as Electron. 
-All the solutions that I did find were either not updated, or janky at best. 
+I was trying to find some kind of way which allowed me to use the tRPC goodness in React Native as well as Electron.
+All the solutions that I did find were either not updated, or janky at best.
 And so, fast-forward to this project!
 
 ## Authors
