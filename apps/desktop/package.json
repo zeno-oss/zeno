@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "nextron",
+  "name": "desktop",
   "version": "0.1.0",
   "main": "app/background.js",
   "scripts": {
