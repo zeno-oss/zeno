@@ -6,7 +6,8 @@ A Monorepo featuring Next.js + Electron + Expo (React Native) + tRPC
 
 ## Screenshots
 
-<img width="1440" alt="Screenshot 2022-11-03 at 4 12 21 AM" src="https://user-images.githubusercontent.com/48734821/199616283-cd0be9b2-7cc2-46ee-b580-f2edb5d93d8f.png">
+<img width="1438" alt="Screenshot 2023-01-12 at 1 27 07 AM" src="https://user-images.githubusercontent.com/48734821/211905579-6cb2a4c1-c509-48ff-9f82-97e8af3ed308.png">
+
 
 ## Installation
 
