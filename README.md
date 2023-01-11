@@ -1,4 +1,4 @@
-# NEET Stack
+# Zeno Stack
 
 A Monorepo featuring Next.js + Electron + Expo (React Native) + tRPC 
  
