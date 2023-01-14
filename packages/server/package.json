@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "name": "server",
+  "version": "0.1.0",
+  "main": "routers/_app.ts",
+  "types": "routers/_app.ts",
+  "dependencies": {
+    "@trpc/server": "^10.9.0",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.7"
+  }
+}
