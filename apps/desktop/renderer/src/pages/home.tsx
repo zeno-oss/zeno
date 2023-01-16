@@ -1,7 +1,8 @@
 import Head from "next/head";
 import React from "react";
 
-import { increment, useAppDispatch, useAppSelector } from "store";
+import { increment } from "store";
+import { useAppDispatch, useAppSelector } from "../utils/store";
 import { trpc } from "../utils/trpc";
 
 function Home() {

@@ -1,6 +1,7 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 
-import { increment, useAppDispatch, useAppSelector } from "store";
+import { increment } from "store";
+import { useAppDispatch, useAppSelector } from "../utils/store";
 import { trpc } from "../utils/trpc";
 
 const Home = () => {

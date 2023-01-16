@@ -6,6 +6,7 @@
   "types": "index.tsx",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
-    "react-redux": "^8.0.5"
+    "react-redux": "^8.0.5",
+    "redux-persist": "^6.0.0"
   }
 }
