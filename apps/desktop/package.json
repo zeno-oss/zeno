@@ -17,6 +17,7 @@
     "electron-store": "^8.1.0",
     "next-transpile-modules": "^10.0.0",
     "server": "*",
+    "store": "*",
     "zod": "^3.20.2"
   },
   "devDependencies": {

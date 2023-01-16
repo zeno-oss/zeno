@@ -1,10 +1,15 @@
 import type { AppType } from "next/app";
-import '../styles/globals.css';
+import "../styles/globals.css";
 
-import { trpc } from '../utils/trpc';
+import { Provider } from "store";
+import { trpc } from "../utils/trpc";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <Provider>
+      <Component {...pageProps} />
+    </Provider>
+  );
 };
 
 export default trpc.withTRPC(MyApp);
