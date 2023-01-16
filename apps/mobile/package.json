@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
-    "@trpc/client": "^10.8.2",
-    "@trpc/server": "^10.8.2",
+    "@trpc/client": "^10.9.0",
+    "@trpc/server": "^10.9.0",
     "expo": "^47.0.13",
     "expo-constants": "~14.0.2",
     "expo-status-bar": "~1.4.2",
@@ -20,7 +20,7 @@
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
     "react-native-web": "~0.18.9",
-    "desktop": "*"
+    "server": "*"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

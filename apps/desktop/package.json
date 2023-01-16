@@ -10,12 +10,13 @@
   },
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
-    "@trpc/client": "^10.8.2",
-    "@trpc/next": "^10.8.2",
-    "@trpc/react-query": "^10.8.2",
-    "@trpc/server": "^10.8.2",
+    "@trpc/client": "^10.9.0",
+    "@trpc/next": "^10.9.0",
+    "@trpc/react-query": "^10.9.0",
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
+    "next-transpile-modules": "^10.0.0",
+    "server": "*",
     "zod": "^3.20.2"
   },
   "devDependencies": {
