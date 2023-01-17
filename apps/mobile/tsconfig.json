@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "$server": ["../../packages/server/routers/_app.ts"],
+      "$store": ["utils/store.ts"],
+      "$trpc": ["utils/trpc.ts"]
+    }
   }
 }

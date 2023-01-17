@@ -5,12 +5,12 @@ import { SafeAreaView } from "react-native";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink } from "@trpc/client";
 
+import { store } from "$store";
+import { trpc } from "$trpc";
 import { Provider } from "react-redux";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
 import Home from "./screens/Home";
-import { store } from "./utils/store";
-import { trpc } from "./utils/trpc";
 
 let persistor = persistStore(store);
 

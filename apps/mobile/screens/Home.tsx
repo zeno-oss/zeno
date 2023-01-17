@@ -1,8 +1,7 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 
-import { increment } from "store";
-import { useAppDispatch, useAppSelector } from "../utils/store";
-import { trpc } from "../utils/trpc";
+import { increment, useAppDispatch, useAppSelector } from "$store";
+import { trpc } from "$trpc";
 
 const Home = () => {
   const hello = trpc.hello.useQuery({ text: "client" });
