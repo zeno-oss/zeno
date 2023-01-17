@@ -7,6 +7,6 @@
 
 @layer components {
   .btn-blue {
-    @apply text-white font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
+    @apply text-white  text-sm font-bold px-4 py-2 rounded bg-blue-600 hover:bg-blue-500;
   }
 }

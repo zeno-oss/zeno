@@ -1,12 +1,18 @@
-import Constants from 'expo-constants';
-import { useState } from 'react';
-import { SafeAreaView } from 'react-native';
+import Constants from "expo-constants";
+import { useState } from "react";
+import { SafeAreaView } from "react-native";
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { httpBatchLink } from '@trpc/client';
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { httpBatchLink } from "@trpc/client";
 
-import Home from './screens/Home';
-import { trpc } from './utils/trpc';
+import { Provider } from "react-redux";
+import { persistStore } from "redux-persist";
+import { PersistGate } from "redux-persist/integration/react";
+import Home from "./screens/Home";
+import { store } from "./utils/store";
+import { trpc } from "./utils/trpc";
+
+let persistor = persistStore(store);
 
 const { manifest } = Constants;
 const localhost = `http://${manifest!.debuggerHost?.split(":").shift()}:8888`;
@@ -23,13 +29,17 @@ const App = () => {
     }),
   );
   return (
-    <trpc.Provider client={trpcClient} queryClient={queryClient}>
-      <QueryClientProvider client={queryClient}>
-        <SafeAreaView style={{ flex: 1 }}>
-          <Home />
-        </SafeAreaView>
-      </QueryClientProvider>
-    </trpc.Provider>
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        <trpc.Provider client={trpcClient} queryClient={queryClient}>
+          <QueryClientProvider client={queryClient}>
+            <SafeAreaView style={{ flex: 1 }}>
+              <Home />
+            </SafeAreaView>
+          </QueryClientProvider>
+        </trpc.Provider>
+      </PersistGate>
+    </Provider>
   );
 };
 

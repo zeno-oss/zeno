@@ -1,4 +1,4 @@
-const withTM = require("next-transpile-modules")(["server"]); // pass the modules you would like to see transpiled
+const withTM = require("next-transpile-modules")(["server", "store"]); // pass the modules you would like to see transpiled
 
 module.exports = withTM({
   webpack: (config, { isServer }) => {

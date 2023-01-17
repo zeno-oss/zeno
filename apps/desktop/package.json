@@ -9,6 +9,7 @@
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
     "@tanstack/react-query": "^4.22.0",
     "@trpc/client": "^10.9.0",
     "@trpc/next": "^10.9.0",
@@ -16,7 +17,11 @@
     "electron-serve": "^1.1.0",
     "electron-store": "^8.1.0",
     "next-transpile-modules": "^10.0.0",
+    "react-redux": "^8.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-persist-electron-storage": "^2.1.0",
     "server": "*",
+    "store": "*",
     "zod": "^3.20.2"
   },
   "devDependencies": {
