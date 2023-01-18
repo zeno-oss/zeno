@@ -3,7 +3,7 @@ import { createTRPCNext } from "@trpc/next";
 import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server";
 import superjson from "superjson";
 
-import { type AppRouter } from "server";
+import { type AppRouter } from "$server";
 
 const getBaseUrl = () => {
   return `http://localhost:3000`;

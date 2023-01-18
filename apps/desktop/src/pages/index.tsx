@@ -1,7 +1,7 @@
+import { increment, useAppDispatch, useAppSelector } from "$store";
+import { api } from "$trpc";
 import { invoke } from "@tauri-apps/api/tauri";
 import { useState } from "react";
-import { increment, useAppDispatch, useAppSelector } from "../utils/store";
-import { api } from "../utils/trpc";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");

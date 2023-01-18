@@ -1,11 +1,11 @@
+import { api } from "$trpc";
 import type { AppProps } from "next/app";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import { api } from "../utils/trpc";
 
+import { store } from "$store";
 import { Provider } from "react-redux";
 import "../globals.css";
-import { store } from "../utils/store";
 
 let persistor = persistStore(store);
 
