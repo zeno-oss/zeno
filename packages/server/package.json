@@ -2,14 +2,15 @@
   "private": true,
   "name": "server",
   "version": "0.1.0",
-  "main": "routers/_app.ts",
-  "types": "routers/_app.ts",
+  "main": "index.ts",
+  "types": "index.ts",
   "dependencies": {
+    "@prisma/client": "^4.9.0",
     "@trpc/server": "^10.9.0",
     "superjson": "^1.12.2",
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.7"
+    "@types/node": "^18.11.18"
   }
 }
