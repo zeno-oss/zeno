@@ -1,14 +1,14 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 
 import { increment, useAppDispatch, useAppSelector } from "$store";
-import { trpc } from "$trpc";
+import { api } from "$trpc";
 
 const Home = () => {
-  const hello = trpc.hello.useQuery({ text: "client" });
+  const hello = api.example.hello.useQuery({ text: "client" });
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 
-  // if (!hello.data) return <Text>Loading...</Text>;
+  if (!hello.data) return <Text>Loading...</Text>;
 
   return (
     <View style={styles.container}>
@@ -16,7 +16,7 @@ const Home = () => {
       <View style={{ marginTop: 16 }}>
         <View style={styles.section}>
           <Text>This comes from trpc server:</Text>
-          {/* <Text style={styles.bold}>{hello.data.greeting}</Text> */}
+          <Text style={styles.bold}>{hello.data.greeting}</Text>
         </View>
         <View style={styles.section}>
           <Text>This comes from redux: </Text>
