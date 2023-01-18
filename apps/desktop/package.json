@@ -1,42 +1,38 @@
 {
-  "private": true,
   "name": "desktop",
-  "version": "0.1.0",
-  "main": "app/background.js",
+  "private": true,
+  "version": "0.0.0",
   "scripts": {
-    "dev": "nextron",
-    "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps"
+    "dev": "next dev -p 1420",
+    "build": "next build && next export -o dist",
+    "tauri": "tauri"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
     "@tanstack/react-query": "^4.22.0",
+    "@tauri-apps/api": "^1.2.0",
     "@trpc/client": "^10.9.0",
     "@trpc/next": "^10.9.0",
     "@trpc/react-query": "^10.9.0",
-    "electron-serve": "^1.1.0",
-    "electron-store": "^8.1.0",
+    "next": "^13.0.0",
     "next-transpile-modules": "^10.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-redux": "^8.0.5",
     "redux-persist": "^6.0.0",
-    "redux-persist-electron-storage": "^2.1.0",
     "server": "*",
     "store": "*",
     "superjson": "^1.12.2",
     "zod": "^3.20.2"
   },
   "devDependencies": {
-    "@types/node": "^16.11.7",
-    "@types/react": "^18.0.8",
+    "@tauri-apps/cli": "^1.2.2",
+    "@types/node": "^18.7.11",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "autoprefixer": "^10.4.13",
-    "electron": "20.1.0",
-    "electron-builder": "^23.3.3",
-    "next": "^12.2.5",
-    "nextron": "^8.4.0",
     "postcss": "^8.4.21",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.6.3"
+    "typescript": "^4.7.4"
   }
 }
