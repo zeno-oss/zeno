@@ -3,9 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "dev": "next dev -p 1420",
+    "start": "next dev -p 1420",
     "build": "next build && next export -o dist",
-    "tauri": "tauri"
+    "tauri": "tauri",
+    "dev": "tauri dev"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.1",
