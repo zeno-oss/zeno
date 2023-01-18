@@ -1,9 +1,5 @@
 import { invoke } from "@tauri-apps/api/tauri";
-import Image from "next/image";
 import { useState } from "react";
-import nextLogo from "../assets/next.svg";
-import reactLogo from "../assets/react.svg";
-import tauriLogo from "../assets/tauri.svg";
 import { increment, useAppDispatch, useAppSelector } from "../utils/store";
 import { api } from "../utils/trpc";
 
@@ -20,65 +16,36 @@ function App() {
   }
 
   return (
-    <div className="container">
-      <h1>Welcome to Tauri!</h1>
-      <p>{count}</p>
-      <button onClick={() => dispatch(increment())}>Increment</button>
-
-      <div className="row">
-        <span className="logos">
-          <a href="https://nextjs.org" target="_blank">
-            <Image
-              width={144}
-              height={144}
-              src={nextLogo}
-              className="logo next"
-              alt="Next logo"
-            />
-          </a>
-        </span>
-        <span className="logos">
-          <a href="https://tauri.app" target="_blank">
-            <Image
-              width={144}
-              height={144}
-              src={tauriLogo}
-              className="logo tauri"
-              alt="Tauri logo"
-            />
-          </a>
-        </span>
-        <span className="logos">
-          <a href="https://reactjs.org" target="_blank">
-            <Image
-              width={144}
-              height={144}
-              src={reactLogo}
-              className="logo react"
-              alt="React logo"
-            />
-          </a>
-        </span>
-      </div>
-
-      <p>Click on the Tauri, Next, and React logos to learn more.</p>
-
-      <div className="row">
-        <div>
-          <input
-            id="greet-input"
-            onChange={(e) => setName(e.currentTarget.value)}
-            placeholder="Enter a name..."
-          />
-          <button type="button" onClick={() => greet()}>
-            Greet
+    <div className="flex h-[100vh] flex-col items-center justify-center text-2xl">
+      <span>Greetings from Zeno 💕 </span>
+      <div className="mt-4">
+        <div className="flex flex-col items-center">
+          <span className="mt-4 text-lg">This comes from trpc server: </span>
+          <span className="text-lg font-bold">{hello.data?.greeting}</span>
+          <span className="text-lg font-bold">{hello.error?.message}</span>
+        </div>
+        <div className="flex flex-col items-center">
+          <span className="mt-4 text-lg">This comes from redux: </span>
+          <span className="text-lg font-bold">{count}</span>
+          <button className="btn-blue" onClick={() => dispatch(increment())}>
+            Increment
           </button>
         </div>
+        <div className="flex flex-col items-center">
+          <span className="mt-4 text-lg">This comes from rust: </span>
+          <div className="flex items-center space-x-2">
+            <input
+              onChange={(e) => setName(e.currentTarget.value)}
+              className="rounded border-2 p-1 text-center text-sm "
+              placeholder="Enter a name..."
+            />
+            <button className="btn-blue" onClick={() => greet()}>
+              Greet
+            </button>
+          </div>
+          <span className="text-sm">{greetMsg}</span>
+        </div>
       </div>
-
-      <p>{greetMsg}</p>
-      <p>{hello.data?.greeting}</p>
-      <p>{hello.error?.message}</p>
     </div>
   );
 }

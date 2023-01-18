@@ -4,8 +4,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { api } from "../utils/trpc";
 
 import { Provider } from "react-redux";
-import "../App.css";
-import "../style.css";
+import "../globals.css";
 import { store } from "../utils/store";
 
 let persistor = persistStore(store);
