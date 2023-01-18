@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
-import { trpc } from "../utils/trpc";
+import { api } from "../utils/trpc";
 
 import { Provider } from "react-redux";
 import "../App.css";
@@ -21,4 +21,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default trpc.withTRPC(MyApp);
+export default api.withTRPC(MyApp);

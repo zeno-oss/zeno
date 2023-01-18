@@ -1,42 +1,52 @@
-import { httpBatchLink } from "@trpc/client";
+import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
-
-import type { AppRouter } from "server";
+import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server";
 import superjson from "superjson";
 
-function getBaseUrl() {
-  // assume localhost
-  return `http://localhost:8888`;
-}
-console.log("getBaseUrl()", getBaseUrl());
+import { type AppRouter } from "server";
 
-export const trpc = createTRPCNext<AppRouter>({
-  config({ ctx }) {
+const getBaseUrl = () => {
+  return `http://localhost:3000`;
+};
+
+/**
+ * A set of typesafe react-query hooks for your tRPC API
+ */
+export const api = createTRPCNext<AppRouter>({
+  config() {
     return {
+      /**
+       * Transformer used for data de-serialization from the server
+       * @see https://trpc.io/docs/data-transformers
+       **/
       transformer: superjson,
+
+      /**
+       * Links used to determine request flow from client to server
+       * @see https://trpc.io/docs/links
+       * */
       links: [
+        loggerLink({
+          enabled: (opts) =>
+            process.env.NODE_ENV === "development" ||
+            (opts.direction === "down" && opts.result instanceof Error),
+        }),
         httpBatchLink({
-          /**
-           * If you want to use SSR, you need to use the server's full URL
-           * @link https://trpc.io/docs/ssr
-           **/
           url: `${getBaseUrl()}/api/trpc`,
-          fetch(url, options) {
-            return fetch(url, {
-              ...options,
-            });
-          },
         }),
       ],
-      /**
-       * @link https://tanstack.com/query/v4/docs/reference/QueryClient
-       **/
-      // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
     };
   },
-  /**
-   * @link https://trpc.io/docs/ssr
-   **/
   ssr: false,
 });
-// => { useQuery: ..., useMutation: ...}
+
+/**
+ * Inference helper for inputs
+ * @example type HelloInput = RouterInputs['example']['hello']
+ **/
+export type RouterInputs = inferRouterInputs<AppRouter>;
+/**
+ * Inference helper for outputs
+ * @example type HelloOutput = RouterOutputs['example']['hello']
+ **/
+export type RouterOutputs = inferRouterOutputs<AppRouter>;

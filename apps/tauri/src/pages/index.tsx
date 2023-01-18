@@ -5,12 +5,12 @@ import nextLogo from "../assets/next.svg";
 import reactLogo from "../assets/react.svg";
 import tauriLogo from "../assets/tauri.svg";
 import { increment, useAppDispatch, useAppSelector } from "../utils/store";
-import { trpc } from "../utils/trpc";
+import { api } from "../utils/trpc";
 
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
-  const hello = trpc.hello.useQuery({ text: "client" });
+  const hello = api.example.hello.useQuery({ text: "client" });
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
 
