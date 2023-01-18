@@ -1,5 +1,13 @@
 {
   "extends": "../tsconfig.json",
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "$server": ["../../../packages/server/routers/_app.ts"],
+      "$store": ["src/utils/store.ts"],
+      "$trpc": ["src/utils/trpc.ts"]
+    }
+  }
 }

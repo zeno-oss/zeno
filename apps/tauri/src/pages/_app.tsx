@@ -1,15 +1,17 @@
-import type { AppType } from "next/app";
-import "../styles/globals.css";
-
-import { store } from "$store";
-import { trpc } from "$trpc";
-import { Provider } from "react-redux";
+import type { AppProps } from "next/app";
 import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
+import { trpc } from "../utils/trpc";
+
+import { Provider } from "react-redux";
+import "../App.css";
+import "../style.css";
+import { store } from "../utils/store";
 
 let persistor = persistStore(store);
 
-const MyApp: AppType = ({ Component, pageProps }) => {
+// This default export is required in a new `pages/_app.js` file.
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -17,6 +19,6 @@ const MyApp: AppType = ({ Component, pageProps }) => {
       </PersistGate>
     </Provider>
   );
-};
+}
 
 export default trpc.withTRPC(MyApp);

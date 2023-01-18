@@ -6,6 +6,7 @@
   "types": "routers/_app.ts",
   "dependencies": {
     "@trpc/server": "^10.9.0",
+    "superjson": "^1.12.2",
     "zod": "^3.20.2"
   },
   "devDependencies": {

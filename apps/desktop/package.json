@@ -22,6 +22,7 @@
     "redux-persist-electron-storage": "^2.1.0",
     "server": "*",
     "store": "*",
+    "superjson": "^1.12.2",
     "zod": "^3.20.2"
   },
   "devDependencies": {

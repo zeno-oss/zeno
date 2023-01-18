@@ -1,9 +1,8 @@
 import Head from "next/head";
 import React from "react";
 
-import { increment } from "store";
-import { useAppDispatch, useAppSelector } from "../utils/store";
-import { trpc } from "../utils/trpc";
+import { increment, useAppDispatch, useAppSelector } from "$store";
+import { trpc } from "$trpc";
 
 function Home() {
   const hello = trpc.hello.useQuery({ text: "client" });

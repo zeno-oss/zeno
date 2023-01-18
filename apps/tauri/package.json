@@ -1,0 +1,35 @@
+{
+  "name": "tauri",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "next dev -p 1420",
+    "build": "next build && next export -o dist",
+    "tauri": "tauri"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "@tanstack/react-query": "^4.22.0",
+    "@tauri-apps/api": "^1.2.0",
+    "@trpc/client": "^10.9.0",
+    "@trpc/next": "^10.9.0",
+    "@trpc/react-query": "^10.9.0",
+    "next": "^13.0.0",
+    "next-transpile-modules": "^10.0.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-redux": "^8.0.5",
+    "redux-persist": "^6.0.0",
+    "server": "*",
+    "store": "*",
+    "superjson": "^1.12.2",
+    "zod": "^3.20.2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.2.2",
+    "@types/node": "^18.7.11",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "typescript": "^4.7.4"
+  }
+}

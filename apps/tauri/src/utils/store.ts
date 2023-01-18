@@ -1,17 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
-import ElectronStore from "electron-store";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import { persistReducer } from "redux-persist";
-import createElectronStorage from "redux-persist-electron-storage";
+import storage from "redux-persist/lib/storage";
 import { rootReducer } from "store";
-
-const electronStore = new ElectronStore();
 
 const persistConfig = {
   key: "root",
-  storage: createElectronStorage({
-    electronStore,
-  }),
+  storage: storage,
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
