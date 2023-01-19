@@ -1,6 +1,6 @@
 {
   "name": "mobile",
-  "version": "0.1.0",
+  "version": "2.5.0",
   "main": "./index.ts",
   "private": true,
   "scripts": {
@@ -11,27 +11,26 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.17.3",
-    "@reduxjs/toolkit": "^1.9.1",
     "@tanstack/react-query": "^4.22.0",
     "@trpc/client": "^10.9.0",
     "@trpc/server": "^10.9.0",
     "expo": "^47.0.13",
     "expo-constants": "~14.0.2",
     "expo-status-bar": "~1.4.2",
+    "jotai": "^1.13.1",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
     "react-native-web": "~0.18.9",
-    "react-redux": "^8.0.5",
-    "redux-persist": "^6.0.0",
     "server": "*",
-    "store": "*"
+    "store": "*",
+    "superjson": "^1.12.2"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
     "react-native-svg-transformer": "^1.0.0",
-    "typescript": "^4.6.3"
+    "typescript": "^4.9.4"
   }
 }

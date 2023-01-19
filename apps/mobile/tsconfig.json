@@ -1,6 +1,12 @@
 {
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "$server": ["../../packages/server/index.ts"],
+      "$store": ["../../packages/store/index.ts"],
+      "$trpc": ["utils/trpc.ts"]
+    }
   }
 }

@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "utils",
+  "version": "2.5.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "dependencies": {}
+}

@@ -1,4 +1,18 @@
 {
   "extends": "../../tsconfig.json",
-  "exclude": ["node_modules", "../web/next.config.js", "app", "dist"]
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "$server": ["../../packages/server/index.ts"],
+      "$store": ["../../packages/store/index.ts"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
 }
