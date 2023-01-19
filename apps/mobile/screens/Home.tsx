@@ -1,9 +1,11 @@
-import { Button, Text, View } from "react-native";
+import { View } from "react-native";
 
 import { countAtom } from "$store";
 import { api } from "$trpc";
 import { useAtom } from "jotai";
+import Button from "../components/Button";
 import Loader from "../components/Loader";
+import Text from "../components/Text";
 
 const Home = () => {
   const hello = api.example.hello.useQuery({ text: "client" });
@@ -13,7 +15,9 @@ const Home = () => {
 
   return (
     <View className="flex h-[100vh] flex-col items-center justify-center">
-      <Text className=" text-2xl">Greetings from Zeno 💞</Text>
+      <Text className=" text-lemon-400 text-2xl font-bold">
+        Greetings from Zeno 👋
+      </Text>
       <View className="mt-4">
         <View className="mt-4 flex flex-col items-center">
           <Text>This comes from trpc server:</Text>

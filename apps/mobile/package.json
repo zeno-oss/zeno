@@ -16,6 +16,7 @@
     "@trpc/server": "^10.9.0",
     "expo": "^47.0.13",
     "expo-constants": "~14.0.2",
+    "expo-linear-gradient": "~12.0.1",
     "expo-status-bar": "~1.4.2",
     "jotai": "^1.13.1",
     "nativewind": "^2.0.11",
