@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "pent-mobile",
-    "slug": "pent-mobile",
-    "version": "1.0.0",
+    "name": "zeno",
+    "slug": "zeno",
+    "version": "2.5.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
