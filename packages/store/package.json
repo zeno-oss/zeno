@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "store",
+  "version": "2.5.0",
+  "main": "index.ts",
+  "types": "index.ts",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "~1.17.3",
+    "jotai": "^1.13.1",
+    "utils": "*"
+  }
+}

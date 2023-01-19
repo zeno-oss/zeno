@@ -1,36 +1,36 @@
 {
-  "private": true,
   "name": "desktop",
-  "version": "0.1.0",
-  "main": "app/background.js",
+  "private": true,
+  "version": "2.5.0",
   "scripts": {
-    "dev": "nextron",
-    "build": "nextron build",
-    "postinstall": "electron-builder install-app-deps"
+    "start:web": "vite",
+    "build:web": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "dev": "tauri dev",
+    "build": "tauri build"
   },
   "dependencies": {
     "@tanstack/react-query": "^4.22.0",
+    "@tauri-apps/api": "^1.2.0",
     "@trpc/client": "^10.9.0",
-    "@trpc/next": "^10.9.0",
     "@trpc/react-query": "^10.9.0",
-    "electron-serve": "^1.1.0",
-    "electron-store": "^8.1.0",
-    "next-transpile-modules": "^10.0.0",
-    "server": "*",
-    "zod": "^3.20.2"
-  },
-  "devDependencies": {
-    "@types/node": "^16.11.7",
-    "@types/react": "^18.0.8",
-    "autoprefixer": "^10.4.13",
-    "electron": "20.1.0",
-    "electron-builder": "^23.3.3",
-    "next": "^12.2.5",
-    "nextron": "^8.4.0",
-    "postcss": "^8.4.21",
+    "@trpc/server": "^10.9.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "server": "*",
+    "store": "*",
+    "superjson": "^1.12.2"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^1.2.3",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
+    "@vitejs/plugin-react-swc": "^3.0.1",
+    "autoprefixer": "^10.4.13",
+    "postcss": "^8.4.21",
     "tailwindcss": "^3.2.4",
-    "typescript": "^4.6.3"
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4"
   }
 }
