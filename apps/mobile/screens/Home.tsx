@@ -1,26 +1,27 @@
-import { Button, StyleSheet, Text, View } from "react-native";
+import { Button, Text, View } from "react-native";
 
 import { countAtom } from "$store";
 import { api } from "$trpc";
 import { useAtom } from "jotai";
+import Loader from "../components/Loader";
 
 const Home = () => {
   const hello = api.example.hello.useQuery({ text: "client" });
   const [count, setCount] = useAtom(countAtom);
 
-  if (!hello.data) return <Text>Loading...</Text>;
+  if (!hello.data) return <Loader />;
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Greetings from Zeno 💞</Text>
-      <View style={{ marginTop: 16 }}>
-        <View style={styles.section}>
+    <View className="flex h-[100vh] flex-col items-center justify-center">
+      <Text className=" text-2xl">Greetings from Zeno 💞</Text>
+      <View className="mt-4">
+        <View className="mt-4 flex flex-col items-center">
           <Text>This comes from trpc server:</Text>
-          <Text style={styles.bold}>{hello.data.greeting}</Text>
+          <Text className="font-bold">{hello.data.greeting}</Text>
         </View>
-        <View style={styles.section}>
+        <View className="mt-4 flex flex-col items-center">
           <Text>This comes from jotai state: </Text>
-          <Text style={styles.bold}>{count}</Text>
+          <Text className="font-bold">{count}</Text>
           <Button onPress={() => setCount(count + 1)} title="Increment" />
         </View>
       </View>
@@ -29,23 +30,3 @@ const Home = () => {
 };
 
 export default Home;
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  title: {
-    fontSize: 24,
-  },
-  bold: {
-    fontWeight: "bold",
-  },
-  section: {
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    marginTop: 16,
-  },
-});
