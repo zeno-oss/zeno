@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .btn-blue {
-    @apply rounded  bg-blue-600 px-4 py-1 text-sm font-bold text-white hover:bg-blue-500;
+@layer base {
+  body {
+    @apply h-screen bg-gradient-to-b from-purple-600 to-purple-900 text-gray-50;
   }
 }

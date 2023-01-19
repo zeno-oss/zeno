@@ -3,7 +3,12 @@
 const colors = require("../../colors");
 
 module.exports = {
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./App.{js,jsx,ts,tsx}",
+    "./screens/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./navigators/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       colors,

@@ -16,8 +16,10 @@
     "@trpc/server": "^10.9.0",
     "expo": "^47.0.13",
     "expo-constants": "~14.0.2",
+    "expo-linear-gradient": "~12.0.1",
     "expo-status-bar": "~1.4.2",
     "jotai": "^1.13.1",
+    "nativewind": "^2.0.11",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
@@ -27,10 +29,11 @@
     "superjson": "^1.12.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.20.12",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
     "react-native-svg-transformer": "^1.0.0",
+    "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4"
   }
 }
