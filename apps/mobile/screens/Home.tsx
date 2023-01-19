@@ -1,12 +1,12 @@
 import { Button, StyleSheet, Text, View } from "react-native";
 
-import { increment, useAppDispatch, useAppSelector } from "$store";
+import { countAtom } from "$store";
 import { api } from "$trpc";
+import { useAtom } from "jotai";
 
 const Home = () => {
   const hello = api.example.hello.useQuery({ text: "client" });
-  const count = useAppSelector((state) => state.counter.value);
-  const dispatch = useAppDispatch();
+  const [count, setCount] = useAtom(countAtom);
 
   if (!hello.data) return <Text>Loading...</Text>;
 
@@ -19,9 +19,9 @@ const Home = () => {
           <Text style={styles.bold}>{hello.data.greeting}</Text>
         </View>
         <View style={styles.section}>
-          <Text>This comes from redux: </Text>
+          <Text>This comes from jotai state: </Text>
           <Text style={styles.bold}>{count}</Text>
-          <Button onPress={() => dispatch(increment())} title="Increment" />
+          <Button onPress={() => setCount(count + 1)} title="Increment" />
         </View>
       </View>
     </View>

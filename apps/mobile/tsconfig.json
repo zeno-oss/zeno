@@ -5,7 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "$server": ["../../packages/server/index.ts"],
-      "$store": ["utils/store.ts"],
+      "$store": ["../../packages/store/index.ts"],
       "$trpc": ["utils/trpc.ts"]
     }
   }

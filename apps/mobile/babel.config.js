@@ -8,7 +8,7 @@ module.exports = function (api) {
         {
           alias: {
             $server: "server",
-            $store: "./utils/store.ts",
+            $store: "store",
             $trpc: "./utils/trpc.ts",
           },
         },
