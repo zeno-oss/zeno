@@ -1,14 +1,14 @@
 {
   "build": {
-    "beforeDevCommand": "yarn start",
-    "beforeBuildCommand": "yarn build",
+    "beforeDevCommand": "yarn start:web",
+    "beforeBuildCommand": "yarn build:web",
     "devPath": "http://localhost:1420",
     "distDir": "../dist",
-    "withGlobalTauri": false
+    "withGlobalTauri": true
   },
   "package": {
-    "productName": "productiv",
-    "version": "0.0.0"
+    "productName": "zeno",
+    "version": "2.5.0"
   },
   "tauri": {
     "allowlist": {
@@ -33,7 +33,7 @@
         "icons/icon.icns",
         "icons/icon.ico"
       ],
-      "identifier": "com.zeno.productiv",
+      "identifier": "com.zeno.zeno",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -62,7 +62,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "productiv",
+        "title": "zeno",
         "width": 800
       }
     ]

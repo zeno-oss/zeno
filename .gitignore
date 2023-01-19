@@ -139,3 +139,6 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Tauri
+target/
