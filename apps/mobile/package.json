@@ -28,7 +28,7 @@
     "superjson": "^1.12.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.19.3",
+    "@babel/core": "^7.20.12",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
     "react-native-svg-transformer": "^1.0.0",
