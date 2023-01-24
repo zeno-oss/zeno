@@ -4,7 +4,9 @@ import { useState } from "react";
 import superjson from "superjson";
 import Home from "./components/Home";
 import { api } from "./utils/trpc";
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import routes from "./routes";
+const router = createBrowserRouter([...routes]);
 function App() {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
@@ -21,7 +23,7 @@ function App() {
   return (
     <api.Provider client={trpcClient} queryClient={queryClient}>
       <QueryClientProvider client={queryClient}>
-        <Home />
+        <RouterProvider router={router} />
       </QueryClientProvider>
     </api.Provider>
   );

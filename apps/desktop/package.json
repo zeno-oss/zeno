@@ -18,6 +18,7 @@
     "@trpc/server": "^10.9.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-router-dom": "^6.7.0",
     "server": "*",
     "store": "*",
     "superjson": "^1.12.2"
