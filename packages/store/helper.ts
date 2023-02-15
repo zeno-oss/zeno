@@ -9,7 +9,6 @@ export function persistedAtom<T>(key: string, initialValue: T) {
   if (isMobile()) {
     return atomWithStorage<T>(key, initialValue, {
       ...storage,
-      delayInit: true,
     });
   }
   return atomWithStorage<T>(key, initialValue);

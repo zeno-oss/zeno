@@ -6,7 +6,6 @@
   "types": "index.ts",
   "dependencies": {
     "@react-native-async-storage/async-storage": "~1.17.3",
-    "jotai": "^1.13.1",
     "utils": "*"
   }
 }
