@@ -28,18 +28,32 @@
     "store": "yarn workspace store",
     "utils": "yarn workspace utils"
   },
+  "dependencies": {
+    "@tanstack/react-query": "^4.24.6",
+    "@trpc/client": "^10.11.1",
+    "@trpc/server": "^10.11.1",
+    "@trpc/react-query": "^10.11.1",
+    "jotai": "^2.0.1",
+    "@prisma/client": "^4.10.1",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "superjson": "^1.12.2",
+    "zod": "^3.20.6"
+  },
   "devDependencies": {
-    "@manypkg/cli": "^0.19.2",
+    "@manypkg/cli": "^0.20.0",
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.11",
     "husky": "^8.0.3",
-    "prettier": "^2.8.3",
-    "turbo": "^1.7.0"
+    "prettier": "^2.8.4",
+    "prisma": "^4.10.1",
+    "@types/prettier": "^2.7.2",
+    "turbo": "^1.7.4",
+    "typescript": "^4.9.5"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   },
-  "dependencies": {},
-  "packageManager": "yarn@1.22.19",
-  "resolutions": {
-    "react": "18.1.0"
-  }
+  "packageManager": "yarn@1.22.19"
 }
