@@ -2,6 +2,8 @@
 
 A Cross Platform Monorepo featuring Next.js + tRPC + Tauri + Vite + Expo (React Native).
 
+__Soon To Be Updated__
+
 [![Stars](https://img.shields.io/github/stars/zeno-oss/zeno?style=social)](https://github.com/zeno-oss/zeno)
 
 ## Provides you with a end-to-end typesafe:
